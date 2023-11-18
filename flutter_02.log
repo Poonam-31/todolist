@@ -1,0 +1,83 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run -d chrome
+
+## exception
+
+ShaderCompilerException: ShaderCompilerException: Shader compilation of "/Applications/development/flutter/packages/flutter/lib/src/material/shaders/ink_sparkle.frag" to "build/flutter_assets/shaders/ink_sparkle.frag" failed with exit code -9.
+impellerc stdout:
+
+impellerc stderr:
+
+
+
+
+```
+#0      ShaderCompiler.compileShader (package:flutter_tools/src/build_system/targets/shader_compiler.dart:200:9)
+<asynchronous suspension>
+#1      writeBundle.<anonymous closure> (package:flutter_tools/src/bundle_builder.dart:186:25)
+<asynchronous suspension>
+#2      Future.wait.<anonymous closure> (dart:async/future.dart:523:21)
+<asynchronous suspension>
+#3      writeBundle (package:flutter_tools/src/bundle_builder.dart:164:3)
+<asynchronous suspension>
+#4      WebDevFS.update (package:flutter_tools/src/isolated/devfs_web.dart:871:9)
+<asynchronous suspension>
+#5      ResidentWebRunner._updateDevFS (package:flutter_tools/src/isolated/resident_web_runner.dart:521:35)
+<asynchronous suspension>
+#6      ResidentWebRunner.run.<anonymous closure> (package:flutter_tools/src/isolated/resident_web_runner.dart:308:41)
+<asynchronous suspension>
+#7      asyncGuard.<anonymous closure> (package:flutter_tools/src/base/async_guard.dart:111:24)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, 3.16.0, on macOS 12.3.1 21E258 darwin-arm64 (Rosetta), locale en-GB)
+    [32m•[39m Flutter version 3.16.0 on channel stable at /Applications/development/flutter
+    [32m•[39m Upstream repository https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision db7ef5bf9f (3 days ago), 2023-11-15 11:25:44 -0800
+    [32m•[39m Engine revision 74d16627b9
+    [32m•[39m Dart version 3.2.0
+    [32m•[39m DevTools version 2.28.2
+
+[31m[✗][39m Android toolchain - develop for Android devices
+    [31m✗[39m Unable to locate Android SDK.
+      Install Android Studio from: https://developer.android.com/studio/index.html
+      On first launch it will assist you in installing the Android SDK components.
+      (or visit https://flutter.dev/docs/get-started/install/macos#android-setup for detailed instructions).
+      If the Android SDK has been installed to a custom location, please use
+      `flutter config --android-sdk` to update to that location.
+
+
+[33m[!][39m Xcode - develop for iOS and macOS (Xcode 13.3.1)
+    [32m•[39m Xcode at /Applications/Xcode.app/Contents/Developer
+    [32m•[39m Build 13E500a
+    [31m✗[39m Flutter requires Xcode 14 or higher.
+      Download the latest version or update via the Mac App Store.
+    [32m•[39m CocoaPods version 1.14.2
+
+[32m[✓][39m Chrome - develop for the web
+    [32m•[39m Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[33m[!][39m Android Studio (not installed)
+    [32m•[39m Android Studio not found; download from https://developer.android.com/studio/index.html
+      (or visit https://flutter.dev/docs/get-started/install/macos#android-setup for detailed instructions).
+
+[32m[✓][39m VS Code (version 1.66.2)
+    [32m•[39m VS Code at /Users/poonamchandra/Downloads/Softwares/Visual Studio Code.app/Contents
+    [32m•[39m Flutter extension version 3.40.0
+
+[32m[✓][39m Connected device (2 available)
+    [32m•[39m macOS (desktop) • macos  • darwin-arm64   • macOS 12.3.1 21E258 darwin-arm64 (Rosetta)
+    [32m•[39m Chrome (web)    • chrome • web-javascript • Google Chrome 119.0.6045.159
+
+[32m[✓][39m Network resources
+    [32m•[39m All expected network resources are available.
+
+[33m![39m Doctor found issues in 3 categories.
+```
