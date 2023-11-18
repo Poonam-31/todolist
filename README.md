@@ -5,8 +5,6 @@ Assignmet Flutter App with Back4App Integration
 
 In this assignment, we will create a Flutter app that connects to Back4App, a Backend-as-a-Service (BaaS) platform, to manage tasks. we will be responsible for setting up the Back4App backend, creating the Flutter app, and implementing the necessary functionality to interact with the backend.
 
-**Assignment Steps:**
-
 # Set Up Back4App
 To initiate the Back4App setup process, we can refer to the guidelines provided at https://www.back4app.com/docs/get-started/new-parse-app.
 
