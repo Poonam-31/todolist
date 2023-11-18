@@ -59,23 +59,27 @@ class _TodoListScreenState extends State<TodoListScreen> {
         String vdescription = "";
 
         return AlertDialog(
+          contentPadding: const EdgeInsets.all(16), // Set the padding as needed
           title: const Text("Task Details"),
-          content: Column(
-            children: [
-              TextField(
-                onChanged: (value) {
-                  vtitle = value;
-                },
-                decoration: const InputDecoration(labelText: "Task Title"),
-              ),
-              TextField(
-                onChanged: (value) {
-                  vdescription = value;
-                },
-                decoration:
-                    const InputDecoration(labelText: "Task Description"),
-              ),
-            ],
+          content: SizedBox(
+            width: 600, // Set the width as needed
+            child: Column(
+              children: [
+                TextField(
+                  onChanged: (value) {
+                    vtitle = value;
+                  },
+                  decoration: const InputDecoration(labelText: "Task Title"),
+                ),
+                TextField(
+                  onChanged: (value) {
+                    vdescription = value;
+                  },
+                  decoration:
+                      const InputDecoration(labelText: "Task Description"),
+                ),
+              ],
+            ),
           ),
           actions: [
             ElevatedButton(
@@ -91,7 +95,7 @@ class _TodoListScreenState extends State<TodoListScreen> {
                       _todos.add(todo);
                     });
                   } catch (e) {
-                    // Handle the error as needed 
+                    // Handle the error as needed
                   }
                 }
                 // ignore: use_build_context_synchronously
@@ -118,7 +122,6 @@ class _TodoListScreenState extends State<TodoListScreen> {
           return Card(
             elevation: 4,
             margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-            
             child: ListTile(
               title: Text(
                 _todos[index].title,
