@@ -108,6 +108,41 @@ class _TodoListScreenState extends State<TodoListScreen> {
     );
   }
 
+  Future<void> _showDeleteConfirmationDialog(int index) async {
+    return showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Confirm Delete'),
+          content: const Text('Are you sure you want to delete this task?'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () async {
+                try {
+                  await _todos[index].delete();
+                  setState(() {
+                    _todos.removeAt(index);
+                  });
+                } catch (e) {
+                  // Handle the error as needed
+                }
+                // ignore: use_build_context_synchronously
+                Navigator.of(context).pop(); // Close the dialog
+              },
+              child: const Text('Delete'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -131,15 +166,8 @@ class _TodoListScreenState extends State<TodoListScreen> {
               ),
               trailing: IconButton(
                 icon: const Icon(Icons.delete),
-                onPressed: () async {
-                  try {
-                    await _todos[index].delete();
-                    setState(() {
-                      _todos.removeAt(index);
-                    });
-                  } catch (e) {
-                    // Handle the error as needed
-                  }
+                onPressed: () {
+                  _showDeleteConfirmationDialog(index);
                 },
               ),
             ),
