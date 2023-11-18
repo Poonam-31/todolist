@@ -47,3 +47,22 @@ keyClientKey = Client Key
 It should look like this:
 
 <img width="594" alt="Screenshot 2023-11-18 at 7 21 03 pm" src="https://github.com/Poonam-31/todolist/assets/33808820/c3bafdd1-7123-471e-934e-83865382c00d">
+
+**Application Features**
+This task management app allows you to input tasks with titles and descriptions, and it includes a feature for deleting tasks.
+
+**Web Application**
+
+Enter task details:
+<img width="1440" alt="Screenshot 2023-11-18 at 8 29 02 pm" src="https://github.com/Poonam-31/todolist/assets/33808820/2e0771ec-da34-43e8-9dfe-49f89101f413">
+
+Add task to the list:
+<img width="1440" alt="Screenshot 2023-11-18 at 8 30 46 pm" src="https://github.com/Poonam-31/todolist/assets/33808820/0dc15fed-9c6d-4ba2-af36-e6dbf8c790b5">
+
+Back4App Database:
+<img width="1440" alt="Screenshot 2023-11-18 at 8 33 45 pm" src="https://github.com/Poonam-31/todolist/assets/33808820/994731db-74b4-44ee-be68-c937c38d5f80">
+
+Back4App Database after task deleted from the list: 
+<img width="1440" alt="Screenshot 2023-11-18 at 8 35 01 pm" src="https://github.com/Poonam-31/todolist/assets/33808820/72ce25c6-5515-41c7-b76c-d2e1d60aef6a">
+
+
