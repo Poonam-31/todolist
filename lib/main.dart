@@ -59,24 +59,23 @@ class _TodoListScreenState extends State<TodoListScreen> {
         String vdescription = "";
 
         return AlertDialog(
-          contentPadding: const EdgeInsets.all(16), // Set the padding as needed
+          contentPadding: const EdgeInsets.all(16),
           title: const Text("Task Details"),
           content: SizedBox(
-            width: 600, // Set the width as needed
+            width: 600,
             child: Column(
               children: [
                 TextField(
                   onChanged: (value) {
                     vtitle = value;
                   },
-                  decoration: const InputDecoration(labelText: "Task Title"),
+                  decoration: const InputDecoration(labelText: "Title"),
                 ),
                 TextField(
                   onChanged: (value) {
                     vdescription = value;
                   },
-                  decoration:
-                      const InputDecoration(labelText: "Task Description"),
+                  decoration: const InputDecoration(labelText: "Description"),
                 ),
               ],
             ),
@@ -113,7 +112,7 @@ class _TodoListScreenState extends State<TodoListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Assignmet Flutter App with Back4App Integration"),
+        title: const Text("To Do List"),
         backgroundColor: const Color(0xFFEADEFF),
       ),
       body: ListView.builder(
