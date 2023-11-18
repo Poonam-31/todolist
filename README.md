@@ -1,5 +1,5 @@
 # todolist
-Assignmet Flutter App with Back4App Integration
+Assigment Flutter App with Back4App Integration
 
 **Assignment Description:**
 
@@ -61,6 +61,9 @@ Back4App Database:
 <img width="1440" alt="Screenshot 2023-11-18 at 8 33 45 pm" src="https://github.com/Poonam-31/todolist/assets/33808820/994731db-74b4-44ee-be68-c937c38d5f80">
 
 Back4App Database after task deleted from the list: 
+
+<img width="652" alt="Screenshot 2023-11-18 at 8 55 56 pm" src="https://github.com/Poonam-31/todolist/assets/33808820/87428cc0-d528-4a73-bced-eb803916d711">
+
 <img width="1440" alt="Screenshot 2023-11-18 at 8 35 01 pm" src="https://github.com/Poonam-31/todolist/assets/33808820/72ce25c6-5515-41c7-b76c-d2e1d60aef6a">
 
 
